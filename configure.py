@@ -277,6 +277,10 @@ config.libs = [
         Object(Matching, "framework/f_base.cpp"),
         Object(Matching, "framework/f_manager.cpp")
     ]),
+    Rel("d_profile", [
+        Object(Matching, "REL/rel_init.cpp"),
+        Object(Matching, "REL/d_profileNP/d_profile.cpp")
+    ]),
     {
         "lib": "Runtime.PPCEABI.H",
         "mw_version": config.linker_version,

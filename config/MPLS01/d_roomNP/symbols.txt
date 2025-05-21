@@ -9,5 +9,5 @@ fn_6_F0 = .text:0x000000F0; // type:function size:0x8
 fn_6_100 = .text:0x00000100; // type:function size:0x58
 _ctors = .ctors:0x00000000; // type:label scope:global
 _dtors = .dtors:0x00000000; // type:label scope:global
-lbl_6_section4_0 = .rodata:0x00000000; // type:object size:0x8
+g_profile_P9 = .rodata:0x00000000; // type:object size:0x8
 lbl_6_section4_8 = .rodata:0x00000008; // type:object size:0x4C

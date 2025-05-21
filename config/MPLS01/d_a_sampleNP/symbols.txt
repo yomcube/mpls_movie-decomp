@@ -10,5 +10,5 @@ fn_7_120 = .text:0x00000120; // type:function size:0x5C
 fn_7_180 = .text:0x00000180; // type:function size:0x4
 _ctors = .ctors:0x00000000; // type:label scope:global
 _dtors = .dtors:0x00000000; // type:label scope:global
-lbl_7_section4_0 = .rodata:0x00000000; // type:object size:0x8
+g_profile_P8 = .rodata:0x00000000; // type:object size:0x8
 lbl_7_section4_8 = .rodata:0x00000008; // type:object size:0x4C

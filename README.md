@@ -1,4 +1,4 @@
-Some Game
+Wii Motion Plus Demo Video Player
 [![Build Status]][actions] [![Code Progress]][progress] [![Data Progress]][progress] [![Discord Badge]][discord]
 =============
 

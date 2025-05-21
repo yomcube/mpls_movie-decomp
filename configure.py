@@ -265,7 +265,8 @@ config.warn_missing_config = True
 config.warn_missing_source = False
 config.libs = [
     DolphinLib("framework", [
-        Object(Matching, "framework/f_base.cpp")
+        Object(Matching, "framework/f_base.cpp"),
+        Object(Matching, "framework/f_manager.cpp")
     ]),
     {
         "lib": "Runtime.PPCEABI.H",

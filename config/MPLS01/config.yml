@@ -1,0 +1,39 @@
+# See config.example.yml for documentation.
+object_base: orig/MPLS01
+object: sys/mpls_movie/player.dol
+hash: 954b60a3f0d81da3586db48f56d894d08d8a24f2
+symbols: config/MPLS01/symbols.txt
+splits: config/MPLS01/splits.txt
+# Change this to match the linker version.
+# See config.example.yml for a list.
+mw_comment_version: 14
+
+modules:
+- object: sys/mpls_movie/rels/d_a_sampleNP.rel
+  hash: 333f431cbb3357e7a19b984a3e5c2a5c512ad9b9
+  symbols: config/MPLS01/d_a_sampleNP/symbols.txt
+  splits: config/MPLS01/d_a_sampleNP/splits.txt
+- object: sys/mpls_movie/rels/d_cameraNP.rel
+  hash: 4a3881122d56a225165324e143b436649db3a04a
+  symbols: config/MPLS01/d_cameraNP/symbols.txt
+  splits: config/MPLS01/d_cameraNP/splits.txt
+- object: sys/mpls_movie/rels/d_profileNP.rel
+  hash: f0cee621e5823860ea032174ece978f7a6c7ad3e
+  symbols: config/MPLS01/d_profileNP/symbols.txt
+  splits: config/MPLS01/d_profileNP/splits.txt
+- object: sys/mpls_movie/rels/d_roomNP.rel
+  hash: 1a7c507f0ced9afd60333e2691aaac7198359982
+  symbols: config/MPLS01/d_roomNP/symbols.txt
+  splits: config/MPLS01/d_roomNP/splits.txt
+- object: sys/mpls_movie/rels/d_s_bootNP.rel
+  hash: 2b1a88a5c77f850eb1973af277bfa315157b340d
+  symbols: config/MPLS01/d_s_bootNP/symbols.txt
+  splits: config/MPLS01/d_s_bootNP/splits.txt
+- object: sys/mpls_movie/rels/d_s_selectNP.rel
+  hash: b32d0a9047be39f8f70c38162a8508ebd398dc72
+  symbols: config/MPLS01/d_s_selectNP/symbols.txt
+  splits: config/MPLS01/d_s_selectNP/splits.txt
+- object: sys/mpls_movie/rels/d_s_stageNP.rel
+  hash: 5f49d7668940a39795054b5a539a494aa3298faf
+  symbols: config/MPLS01/d_s_stageNP/symbols.txt
+  splits: config/MPLS01/d_s_stageNP/splits.txt

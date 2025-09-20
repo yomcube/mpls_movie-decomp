@@ -278,6 +278,9 @@ config.libs = [
         Object(Matching, "framework/f_base.cpp"),
         Object(Matching, "framework/f_manager.cpp")
     ]),
+    Rel("d_a_sample", [
+        Object(Matching, "REL/d_a_sampleNP/d_a_sample.cpp")
+    ]),
     Rel("d_profile", [
         Object(Matching, "REL/d_profileNP/d_profile.cpp")
     ]),

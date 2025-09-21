@@ -36,6 +36,9 @@ typedef volatile f64 vf64;
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
 #define BIT_FLAG(bit) ((bit) < 0 ? 0 : 1 << (bit))
 
+#define DECL_SECTION(x) __declspec(section x)
+#define DECL_WEAK __declspec(weak)
+
 #ifdef __CWCC__
 #define NOINLINE __attribute__((noinline))
 #else

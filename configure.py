@@ -284,6 +284,9 @@ config.libs = [
     Rel("d_room", [
         Object(Matching, "REL/d_roomNP/d_room.cpp")
     ]),
+    Rel("d_camera", [
+        Object(Matching, "REL/d_cameraNP/d_camera.cpp")
+    ]),
     {
         "lib": "Runtime.PPCEABI.H",
         "mw_version": config.linker_version,

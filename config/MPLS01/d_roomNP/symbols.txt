@@ -9,5 +9,5 @@ draw__7dRoom_cFv = .text:0x000000F0; // type:function size:0x8
 __dt__7dRoom_cFv = .text:0x00000100; // type:function size:0x58
 _ctors = .ctors:0x00000000; // type:label scope:global
 _dtors = .dtors:0x00000000; // type:label scope:global
-g_profile_P9 = .data:0x00000000; // type:object size:0x8
+g_profile_ROOM = .data:0x00000000; // type:object size:0x8
 __vt__7dRoom_c = .data:0x00000008; // type:object size:0x4C

@@ -11,5 +11,5 @@ fn_4_210 = .text:0x00000210; // type:function size:0x4
 fn_4_220 = .text:0x00000220; // type:function size:0x5C
 _ctors = .ctors:0x00000000; // type:label scope:global
 _dtors = .dtors:0x00000000; // type:label scope:global
-g_profile_P0 = .rodata:0x00000000; // type:object size:0x8
-lbl_4_section4_8 = .rodata:0x00000008; // type:object size:0x4C
+g_profile_STAGE = .data:0x00000000; // type:object size:0x8
+lbl_4_section4_8 = .data:0x00000008; // type:object size:0x4C

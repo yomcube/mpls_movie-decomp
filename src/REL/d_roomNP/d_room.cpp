@@ -1,7 +1,7 @@
 #include <game/bases/d_room.hpp>
 #include <game/framework/f_profile.hpp>
 
-CUSTOM_BASE_PROFILE(P9, dRoom_c, 9, 8);
+CUSTOM_BASE_PROFILE(ROOM, dRoom_c, fProfile::ROOM, fProfile::DRAW_ORDER::ROOM);
 
 int dRoom_c::create() { return 1; }
 int dRoom_c::doDelete() { return 1; }

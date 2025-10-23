@@ -239,6 +239,7 @@ def DolphinLib(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
         "objects": objects,
     }
 
+
 def GameLib(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
     return {
         "lib": lib_name,
@@ -278,8 +279,10 @@ config.libs = [
         Object(Matching, "framework/f_manager.cpp")
     ]),
     Rel("d_profile", [
-        Object(Matching, "REL/rel_init.cpp"),
         Object(Matching, "REL/d_profileNP/d_profile.cpp")
+    ]),
+    Rel("d_room", [
+        Object(Matching, "REL/d_roomNP/d_room.cpp")
     ]),
     {
         "lib": "Runtime.PPCEABI.H",
@@ -289,6 +292,14 @@ config.libs = [
         "objects": [
             Object(NonMatching, "Runtime.PPCEABI.H/global_destructor_chain.c"),
             Object(NonMatching, "Runtime.PPCEABI.H/__init_cpp_exceptions.cpp"),
+        ],
+    },
+    {
+        "lib": "REL",
+        "cflags": cflags_rel,
+        "progress_category": "game",  # str | List[str]
+        "objects": [
+            Object(Matching, "REL/rel_init.cpp")
         ],
     },
 ]

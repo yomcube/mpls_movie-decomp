@@ -278,11 +278,26 @@ config.libs = [
         Object(Matching, "framework/f_base.cpp"),
         Object(Matching, "framework/f_manager.cpp")
     ]),
+    Rel("d_a_sample", [
+        Object(NonMatching, "REL/d_a_sampleNP/d_a_sample.cpp")
+    ]),
+    Rel("d_camera", [
+        Object(NonMatching, "REL/d_cameraNP/d_camera.cpp")
+    ]),
     Rel("d_profile", [
         Object(Matching, "REL/d_profileNP/d_profile.cpp")
     ]),
     Rel("d_room", [
         Object(Matching, "REL/d_roomNP/d_room.cpp")
+    ]),
+    Rel("d_s_boot", [
+        Object(NonMatching, "REL/d_s_bootNP/d_s_boot.cpp")
+    ]),
+    Rel("d_s_select", [
+        Object(NonMatching, "REL/d_s_selectNP/d_s_select.cpp")
+    ]),
+    Rel("d_s_stage", [
+        Object(NonMatching, "REL/d_s_stageNP/d_s_stage.cpp")
     ]),
     {
         "lib": "Runtime.PPCEABI.H",

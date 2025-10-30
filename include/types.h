@@ -41,3 +41,6 @@ typedef volatile f64 vf64;
 #else
 #define NOINLINE
 #endif
+
+#define DECL_SECTION(x) __declspec(section x)
+#define DECL_WEAK __declspec(weak)

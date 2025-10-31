@@ -284,6 +284,12 @@ config.libs = [
     Rel("d_room", [
         Object(Matching, "REL/d_roomNP/d_room.cpp")
     ]),
+    Rel("d_s_boot", [
+        Object(Matching, "REL/d_s_bootNP/d_s_boot.cpp")
+    ]),
+    Rel("d_s_select", [
+        Object(NonMatching, "REL/d_s_selectNP/d_s_select.cpp")
+    ]),
     {
         "lib": "Runtime.PPCEABI.H",
         "mw_version": config.linker_version,

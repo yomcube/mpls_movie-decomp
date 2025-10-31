@@ -13,6 +13,10 @@ Sections:
 	.sdata2     type:rodata align:8
 	.sbss2      type:bss align:32
 
+bases/d_scene.cpp:
+	.text       start:0x8000A270 end:0x8000A840
+	.data       start:0x801681F8 end:0x80168248
+
 framework/f_base.cpp:
 	.text       start:0x8001B470 end:0x8001C564
 	.data       start:0x8016E720 end:0x8016E850

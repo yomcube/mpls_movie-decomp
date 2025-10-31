@@ -278,6 +278,9 @@ config.libs = [
         Object(Matching, "framework/f_base.cpp"),
         Object(Matching, "framework/f_manager.cpp")
     ]),
+    GameLib("bases", [
+        Object(NonMatching, "bases/d_scene.cpp")
+    ]),
     Rel("d_profile", [
         Object(Matching, "REL/d_profileNP/d_profile.cpp")
     ]),

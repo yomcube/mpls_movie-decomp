@@ -276,7 +276,10 @@ config.warn_missing_source = False
 config.libs = [
     GameLib("framework", [
         Object(Matching, "framework/f_base.cpp"),
-        Object(Matching, "framework/f_manager.cpp")
+        Object(Matching, "framework/f_helper_unk.cpp"),
+        Object(Matching, "framework/f_list.cpp"),
+        Object(Matching, "framework/f_manager.cpp"),
+        Object(Matching, "framework/f_tree.cpp")
     ]),
     Rel("d_profile", [
         Object(Matching, "REL/d_profileNP/d_profile.cpp")

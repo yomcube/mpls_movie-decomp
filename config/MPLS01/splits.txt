@@ -13,11 +13,17 @@ Sections:
 	.sdata2     type:rodata align:8
 	.sbss2      type:bss align:32
 
+framework/f_helper_unk.cpp:
+	.text       start:0x8001B2C0 end:0x8001B468
+
 framework/f_base.cpp:
 	.text       start:0x8001B470 end:0x8001C564
 	.data       start:0x8016E720 end:0x8016E850
 	.sdata      start:0x8023F7D0 end:0x8023F7D4
 	.sbss       start:0x8023FF68 end:0x8023FF84
+
+framework/f_list.cpp:
+	.text       start:0x8001C570 end:0x8001C6B0
 
 framework/f_manager.cpp:
 	.text       start:0x8001C6B0 end:0x8001C910
@@ -26,6 +32,9 @@ framework/f_manager.cpp:
 	.bss        start:0x801A2570 end:0x801A2610
 	.sdata      start:0x8023F7D8 end:0x8023F7E0
 	.sbss       start:0x8023FF88 end:0x8023FF90
+
+framework/f_tree.cpp:
+	.text       start:0x8001C910 end:0x8001CA08
 
 Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
 	.text       start:0x80138004 end:0x80138074

@@ -6,7 +6,7 @@ Sections:
 	.bss        type:bss align:8
 
 REL/rel_init.cpp:
-	.text       start:0x00000000 end:0x00000070
+	.text       start:0x00000000 end:0x00000064
 
 REL/d_roomNP/d_room.cpp:
 	.text       start:0x00000070 end:0x00000158

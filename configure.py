@@ -256,7 +256,7 @@ def Rel(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
         "lib": lib_name,
         "mw_version": "Wii/1.0",
         "cflags": cflags_rel,
-        "progress_category": "game",
+        "progress_category": "rel",
         "objects": objects,
     }
 
@@ -288,18 +288,22 @@ config.libs = [
         "lib": "Runtime.PPCEABI.H",
         "mw_version": config.linker_version,
         "cflags": cflags_runtime,
-        "progress_category": "sdk",  # str | List[str]
+        "progress_category": "runtime",  # str | List[str]
         "objects": [
-            Object(NonMatching, "Runtime.PPCEABI.H/global_destructor_chain.c"),
             Object(NonMatching, "Runtime.PPCEABI.H/__init_cpp_exceptions.cpp"),
         ],
     },
     {
         "lib": "REL",
         "cflags": cflags_rel,
-        "progress_category": "game",  # str | List[str]
+        "progress_category": "runtime",  # str | List[str]
         "objects": [
-            Object(Matching, "REL/rel_init.cpp")
+            Object(Matching, "REL/rel_init.cpp"),
+            Object(
+                Matching,
+                "REL/global_destructor_chain.c",
+                source="Runtime.PPCEABI.H/global_destructor_chain.c",
+            ),
         ],
     },
 ]
@@ -327,6 +331,8 @@ def link_order_callback(module_id: int, objects: List[str]) -> List[str]:
 config.progress_categories = [
     ProgressCategory("game", "Game Code"),
     ProgressCategory("sdk", "SDK Code"),
+    ProgressCategory("runtime", "Compiler Runtime and Library"),
+    ProgressCategory("rel", "Modules"),
 ]
 config.progress_each_module = args.verbose
 # Optional extra arguments to `objdiff-cli report generate`

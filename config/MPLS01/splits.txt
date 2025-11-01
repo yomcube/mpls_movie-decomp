@@ -32,4 +32,4 @@ Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
 	.ctors      start:0x80147800 end:0x80147804 rename:.ctors$10
 	.dtors      start:0x801478E0 end:0x801478E4 rename:.dtors$10
 	.dtors      start:0x801478E4 end:0x801478E8 rename:.dtors$15
-	.sdata      start:0x8023FD88 end:0x8023FD90
+	.sdata      start:0x8023FD88 end:0x8023FD8C

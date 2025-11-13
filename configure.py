@@ -281,11 +281,20 @@ config.libs = [
     Rel("d_a_sample", [
         Object(NonMatching, "REL/d_a_sampleNP/d_a_sample.cpp")
     ]),
+    Rel("d_camera", [
+        Object(NonMatching, "REL/d_cameraNP/d_camera.cpp")
+    ]),
     Rel("d_profile", [
         Object(Matching, "REL/d_profileNP/d_profile.cpp")
     ]),
     Rel("d_room", [
         Object(Matching, "REL/d_roomNP/d_room.cpp")
+    ]),
+    Rel("d_s_boot", [
+        Object(NonMatching, "REL/d_s_bootNP/d_s_boot.cpp")
+    ]),
+    Rel("d_s_select", [
+        Object(NonMatching, "REL/d_s_selectNP/d_s_select.cpp")
     ]),
     Rel("d_s_stage", [
         Object(NonMatching, "REL/d_s_stageNP/d_s_stage.cpp")
@@ -337,10 +346,7 @@ def link_order_callback(module_id: int, objects: List[str]) -> List[str]:
 config.progress_categories = [
     ProgressCategory("game", "Game Code"),
     ProgressCategory("runtime", "Compiler Runtime and Library"),
-    ProgressCategory("rvlsdk", "RVL SDK"),
-    ProgressCategory("nw4r", "NW4R"),
-    ProgressCategory("egg", "EGG"),
-    ProgressCategory("rel", "Modules"),
+    ProgressCategory("rel", "RELs"),
 ]
 config.progress_each_module = args.verbose
 # Optional extra arguments to `objdiff-cli report generate`

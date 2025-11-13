@@ -5,7 +5,7 @@ namespace fProfile {
     /// @brief A name of a profile. Can be used to index into fProfile::sProfileList.
     /// @ingroup profile
     enum PROFILE_NAME_e {
-        PROFILE_STAGE,
+        STAGE,
         PROFILE_1,
         PROFILE_2,
         PROFILE_3,

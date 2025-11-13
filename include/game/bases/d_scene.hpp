@@ -1,8 +1,7 @@
 #pragma once
-#include <game/framework/f_base.hpp>
+#include <game/bases/d_base.hpp>
 
-// TODO: proper inheritance, etc.
-class dScene_c : public fBase_c {
+class dScene_c : public dBase_c {
 public:
     dScene_c();
     virtual int preCreate();

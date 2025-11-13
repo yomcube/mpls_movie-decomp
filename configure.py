@@ -278,11 +278,17 @@ config.libs = [
         Object(Matching, "framework/f_base.cpp"),
         Object(Matching, "framework/f_manager.cpp")
     ]),
+    Rel("d_a_sample", [
+        Object(NonMatching, "REL/d_a_sampleNP/d_a_sample.cpp")
+    ]),
     Rel("d_profile", [
         Object(Matching, "REL/d_profileNP/d_profile.cpp")
     ]),
     Rel("d_room", [
         Object(Matching, "REL/d_roomNP/d_room.cpp")
+    ]),
+    Rel("d_s_stage", [
+        Object(NonMatching, "REL/d_s_stageNP/d_s_stage.cpp")
     ]),
     {
         "lib": "Runtime.PPCEABI.H",
@@ -330,8 +336,10 @@ def link_order_callback(module_id: int, objects: List[str]) -> List[str]:
 # Adjust as desired for your project
 config.progress_categories = [
     ProgressCategory("game", "Game Code"),
-    ProgressCategory("sdk", "SDK Code"),
     ProgressCategory("runtime", "Compiler Runtime and Library"),
+    ProgressCategory("rvlsdk", "RVL SDK"),
+    ProgressCategory("nw4r", "NW4R"),
+    ProgressCategory("egg", "EGG"),
     ProgressCategory("rel", "Modules"),
 ]
 config.progress_each_module = args.verbose

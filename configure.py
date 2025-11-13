@@ -197,7 +197,9 @@ cflags_base = [
     "-str reuse",
     "-enc SJIS",  # For Wii compilers, replace with `-enc SJIS`
     "-i include",
+    "-i include/lib",
     f"-i build/{config.version}/include",
+    f"-i build/{config.version}/include/lib",
     f"-DBUILD_VERSION={version_num}",
     f"-DVERSION_{config.version}",
 ]
@@ -256,7 +258,7 @@ def Rel(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
         "lib": lib_name,
         "mw_version": "Wii/1.0",
         "cflags": cflags_rel,
-        "progress_category": "rel",
+        "progress_category": "game",
         "objects": objects,
     }
 
@@ -278,8 +280,11 @@ config.libs = [
         Object(Matching, "framework/f_base.cpp"),
         Object(Matching, "framework/f_manager.cpp")
     ]),
+    GameLib("bases", [
+        Object(Matching, "bases/d_actor.cpp"),
+    ]),
     Rel("d_a_sample", [
-        Object(NonMatching, "REL/d_a_sampleNP/d_a_sample.cpp")
+        Object(Matching, "REL/d_a_sampleNP/d_a_sample.cpp")
     ]),
     Rel("d_camera", [
         Object(NonMatching, "REL/d_cameraNP/d_camera.cpp")
@@ -346,7 +351,6 @@ def link_order_callback(module_id: int, objects: List[str]) -> List[str]:
 config.progress_categories = [
     ProgressCategory("game", "Game Code"),
     ProgressCategory("runtime", "Compiler Runtime and Library"),
-    ProgressCategory("rel", "RELs"),
 ]
 config.progress_each_module = args.verbose
 # Optional extra arguments to `objdiff-cli report generate`

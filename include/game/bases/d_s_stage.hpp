@@ -1,7 +1,7 @@
 #pragma once
-#include <game/framework/f_base.hpp>
+#include <game/bases/d_scene.hpp>
 
-class dScStage_c : public fBase_c {
+class dScStage_c : public dScene_c {
 public:
 	virtual int create();
 	virtual int doDelete();

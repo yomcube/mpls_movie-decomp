@@ -17,7 +17,7 @@ namespace fProfile {
         ROOM,
         SELECT,
         BOOT,
-        AC_CAMERA,
+        CAMERA,
 
         // Not a profile, only used to get the number of profiles!
         /// @brief The total number of profiles.
@@ -40,7 +40,7 @@ namespace fProfile {
             ROOM,
             BOOT,
             SELECT,
-            AC_CAMERA,
+            CAMERA,
             STAGE
         };
     }

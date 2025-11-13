@@ -20,6 +20,7 @@ bases/d_actor.cpp:
 
 bases/d_scene.cpp:
 	.text       start:0x8000A270 end:0x8000A7C0
+	.data       start:0x801681F8 end:0x80168248
 
 framework/f_base.cpp:
 	.text       start:0x8001B470 end:0x8001C564
@@ -34,6 +35,10 @@ framework/f_manager.cpp:
 	.bss        start:0x801A2570 end:0x801A2610
 	.sdata      start:0x8023F7D8 end:0x8023F7E0
 	.sbss       start:0x8023FF88 end:0x8023FF90
+
+mLib/m_fader_base.cpp:
+	.text       start:0x8001FEA0 end:0x800200A0
+	.data       start:0x8016EA30 end:0x8016EA58
 
 Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
 	.text       start:0x80138004 end:0x80138074

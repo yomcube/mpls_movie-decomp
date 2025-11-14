@@ -18,6 +18,12 @@ bases/d_actor.cpp:
 	.data       start:0x80155C50 end:0x80155C9C
 	.sbss       start:0x8023FDA8 end:0x8023FDB0
 
+bases/d_reset.cpp:
+	.text       start:0x800092E0 end:0x8000A270
+	.ctors      start:0x80147808 end:0x80147810
+	.sdata      start:0x8023F580 end:0x8023F598
+	.sbss       start:0x8023FE20 end:0x8023FE30
+
 bases/d_scene.cpp:
 	.text       start:0x8000A270 end:0x8000A7C0
 	.data       start:0x801681F8 end:0x80168248
@@ -39,6 +45,25 @@ framework/f_manager.cpp:
 mLib/m_fader_base.cpp:
 	.text       start:0x8001FEA0 end:0x800200A0
 	.data       start:0x8016EA30 end:0x8016EA58
+
+libMobiClip/MoApi.cpp:
+	.text       start:0x80033844 end:0x80034268
+	.data       start:0x80170518 end:0x801707A8
+	.sdata      start:0x8023F810 end:0x8023F818
+	.sbss       start:0x80240028 end:0x80240030
+
+libMobiClip/MoDeblockWii.cpp:
+	.text       start:0x80034268 end:0x80035650
+	.rodata     start:0x80148358 end:0x801485C0
+	.sdata      start:0x8023F818 end:0x8023F820
+
+libMobiClip/MoSdk.cpp:
+	.text       start:0x80035650 end:0x80035C28
+	.data       start:0x801707A8 end:0x801708F8
+	.sdata      start:0x8023F820 end:0x8023F828
+
+libMobiClip/MoSdkAdpcmDecoder.cpp:
+	.text       start:0x80035C28 end:0x80035F68
 
 Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
 	.text       start:0x80138004 end:0x80138074

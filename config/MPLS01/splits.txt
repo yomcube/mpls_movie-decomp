@@ -46,24 +46,79 @@ mLib/m_fader_base.cpp:
 	.text       start:0x8001FEA0 end:0x800200A0
 	.data       start:0x8016EA30 end:0x8016EA58
 
-libMobiClip/MoApi.cpp:
+libMobiclip/MoApi.cpp:
 	.text       start:0x80033844 end:0x80034268
 	.data       start:0x80170518 end:0x801707A8
 	.sdata      start:0x8023F810 end:0x8023F818
 	.sbss       start:0x80240028 end:0x80240030
 
-libMobiClip/MoDeblockWii.cpp:
+libMobiclip/MoDeblockWii.cpp:
 	.text       start:0x80034268 end:0x80035650
 	.rodata     start:0x80148358 end:0x801485C0
 	.sdata      start:0x8023F818 end:0x8023F820
 
-libMobiClip/MoSdk.cpp:
+libMobiclip/MoSdk.cpp:
 	.text       start:0x80035650 end:0x80035C28
 	.data       start:0x801707A8 end:0x801708F8
 	.sdata      start:0x8023F820 end:0x8023F828
 
-libMobiClip/MoSdkAdpcmDecoder.cpp:
+libMobiclip/MoSdkAdpcmDecoder.cpp:
 	.text       start:0x80035C28 end:0x80035F68
+	.data       start:0x801708F8 end:0x80170970
+	.sdata      start:0x8023F828 end:0x8023F838
+
+libMobiclip/MoSdkAudioDecoder.cpp:
+	.text       start:0x80035F68 end:0x800362F8
+	.data       start:0x80170970 end:0x80170A38
+
+libMobiclip/MoSdkDemux.cpp:
+	.text       start:0x800362F8 end:0x800364EC
+
+libMobiclip/MoSdkFastAudioDecoder.cpp:
+	.text       start:0x800364EC end:0x80036884
+	.data       start:0x80170A38 end:0x80170A78
+	.sdata      start:0x8023F838 end:0x8023F840
+
+libMobiclip/MoSdkHeaders.cpp:
+	.text       start:0x80036884 end:0x80037294
+	.rodata     start:0x801485C0 end:0x80148708
+	.data       start:0x80170A78 end:0x80170B78
+	.sdata      start:0x8023F840 end:0x8023F848
+	.sdata2     start:0x80240DF0 end:0x80240E00
+
+libMobiclip/MoSdkInput.cpp:
+	.text       start:0x80037294 end:0x80037710
+	.data       start:0x80170B78 end:0x80170C10
+
+libMobiclip/MoSdkMem.cpp:
+	.text       start:0x80037710 end:0x8003781C
+	.data       start:0x80170C10 end:0x80170C28
+	.sbss       start:0x80240030 end:0x80240040
+
+libMobiclip/MoSdkProcessImage.cpp:
+	.text       start:0x8003781C end:0x80037BA4
+
+libMobiclip/MoSdkVideoDecoder.cpp:
+	.text       start:0x80037BA4 end:0x80037FC8
+	.data       start:0x80170C28 end:0x80170CE8
+
+libMobiclip/VX2_BitStream.cpp:
+	.text       start:0x80037FC8 end:0x80037FEC
+
+libMobiclip/VX2_Cpu.cpp:
+	.text       start:0x80037FEC end:0x80038014
+
+libMobiclip/VX2_DecodeBlock16x16.cpp:
+	.text       start:0x80038014 end:0x80038D54
+	.rodata     start:0x80148708 end:0x80148AE0
+
+libMobiclip/VX2_DecodeBlock16x2.cpp:
+	.text       start:0x80038D54 end:0x800399D8
+	.rodata     start:0x80148AE0 end:0x80148B70
+
+libMobiclip/VX2_DecodeBlock16x4.cpp:
+	.text       start:0x800399D8 end:0x8003A6D8
+	.rodata     start:0x80148B70 end:0x80148C00
 
 Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
 	.text       start:0x80138004 end:0x80138074

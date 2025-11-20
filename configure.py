@@ -283,6 +283,41 @@ config.libs = [
     GameLib("bases", [
         Object(Matching, "bases/d_actor.cpp"),
     ]),
+    {
+        "lib": "Runtime.PPCEABI.H",
+        "mw_version": config.linker_version,
+        "cflags": cflags_runtime,
+        "progress_category": "runtime",  # str | List[str]
+        "objects": [
+            Object(NonMatching, "Runtime.PPCEABI.H/__init_cpp_exceptions.cpp"),
+        ],
+    },
+    {
+        "lib": "Mobiclip",
+        "mw_version": config.linker_version,
+        "cflags": [
+            *cflags_base,
+            "-O0"
+        ],
+        "progress_category": "mobiclip",  # str | List[str]
+        "objects": [
+            Object(NonMatching, "lib/mobiclip/Bignum.cpp"),
+            Object(NonMatching, "lib/mobiclip/VX2_Cpu.cpp"),
+        ],
+    },
+    {
+        "lib": "REL",
+        "cflags": cflags_rel,
+        "progress_category": "runtime",  # str | List[str]
+        "objects": [
+            Object(Matching, "REL/rel_init.cpp"),
+            Object(
+                Matching,
+                "REL/global_destructor_chain.c",
+                source="Runtime.PPCEABI.H/global_destructor_chain.c",
+            ),
+        ],
+    },
     Rel("d_a_sample", [
         Object(Matching, "REL/d_a_sampleNP/d_a_sample.cpp")
     ]),
@@ -304,28 +339,6 @@ config.libs = [
     Rel("d_s_stage", [
         Object(NonMatching, "REL/d_s_stageNP/d_s_stage.cpp")
     ]),
-    {
-        "lib": "Runtime.PPCEABI.H",
-        "mw_version": config.linker_version,
-        "cflags": cflags_runtime,
-        "progress_category": "runtime",  # str | List[str]
-        "objects": [
-            Object(NonMatching, "Runtime.PPCEABI.H/__init_cpp_exceptions.cpp"),
-        ],
-    },
-    {
-        "lib": "REL",
-        "cflags": cflags_rel,
-        "progress_category": "runtime",  # str | List[str]
-        "objects": [
-            Object(Matching, "REL/rel_init.cpp"),
-            Object(
-                Matching,
-                "REL/global_destructor_chain.c",
-                source="Runtime.PPCEABI.H/global_destructor_chain.c",
-            ),
-        ],
-    },
 ]
 
 
@@ -351,6 +364,7 @@ def link_order_callback(module_id: int, objects: List[str]) -> List[str]:
 config.progress_categories = [
     ProgressCategory("game", "Game Code"),
     ProgressCategory("runtime", "Compiler Runtime and Library"),
+    ProgressCategory("mobiclip", "Mobiclip"),
 ]
 config.progress_each_module = args.verbose
 # Optional extra arguments to `objdiff-cli report generate`

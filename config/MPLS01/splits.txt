@@ -18,6 +18,9 @@ bases/d_actor.cpp:
 	.data       start:0x80155C50 end:0x80155C9C
 	.sbss       start:0x8023FDA8 end:0x8023FDB0
 
+bases/d_base.cpp:
+	.text       start:0x80007280 end:0x800072D4
+
 bases/d_reset.cpp:
 	.text       start:0x800092E0 end:0x8000A270
 	.ctors      start:0x80147808 end:0x80147810
@@ -27,6 +30,8 @@ bases/d_reset.cpp:
 bases/d_scene.cpp:
 	.text       start:0x8000A270 end:0x8000A7C0
 	.data       start:0x801681F8 end:0x80168248
+	.sdata      start:0x8023F598 end:0x8023F5A0
+	.sbss       start:0x8023FE34 end:0x8023FE40
 
 framework/f_base.cpp:
 	.text       start:0x8001B470 end:0x8001C564
@@ -44,7 +49,7 @@ framework/f_manager.cpp:
 
 mLib/m_fader_base.cpp:
 	.text       start:0x8001FEA0 end:0x800200A0
-	.data       start:0x8016EA30 end:0x8016EA58
+	.data       start:0x8016EA30 end:0x8016EA54
 
 lib/mobiclip/Bignum.cpp:
 	.text       start:0x80031EF8 end:0x80032C1C

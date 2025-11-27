@@ -3,6 +3,8 @@
 
 class dScSelect_c : public dScene_c {
 public:
+	void callback();
+
 	virtual int create();
 	virtual int doDelete();
 	virtual int execute();

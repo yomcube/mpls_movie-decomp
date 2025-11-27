@@ -282,4 +282,5 @@ private:
     friend class fManager_c;
     friend class fLiNdBa_c;
     friend class fTrMgBa_c;
+    friend class dBase_c;
 };

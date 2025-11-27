@@ -1,5 +1,6 @@
 #pragma once
 #include <types.h>
+
 struct mVec3_c {
     f32 x, y, z;
 };
@@ -48,3 +49,52 @@ public:
     static mAng3_c Ey;
     static mAng3_c Ez;
 };
+
+typedef struct _GXColor {
+    u8 r, g, b, a;
+} GXColor;
+
+namespace dReset {
+    class Manage_c {
+    public:
+        enum Mode_e {
+            NORMAL, SOFT_RESET, HBM_WAIT, DISK_WAIT, FATAL_ERROR, SAFETY_WAIT, NO_CHANGE
+        };
+        enum Exec_e {
+            RESTART_GAME, REBOOT_SYSTEM, RETURN_WII_MENU, RETURN_DATA_MANAGER, POWER_OFF, NONE
+        };
+        void SetSoftResetFinish();
+        void SetSoftResetScene();
+        void PostDeleteScene();
+        void BootComplete();
+        void PermitSoftReset(bool);
+        bool IsFaderBlank() const;
+        void ActiveSaveWindow(bool);
+        bool isSafetyWait() const { return mModeInit == SAFETY_WAIT || mModeProc == SAFETY_WAIT; }
+        void/*EGG::Heap*/ *mpHeap;
+        void/*EGG::ColorFader*/ *mpColorFader;
+        int mModeProc;
+        int mModeInit;
+        int mPrevMode;
+        int mExecMode;
+        bool mHbmReset;
+        bool mHbmReturnMenu;
+        bool mResetCallbackCalled;
+        bool mPowerCallbackCalled;
+        bool mInteriorReturnDataManager;
+        u32 mHbmResetTypeMaybe;
+        u32 mHbmPowerOffTypeMaybe;
+        int mSoftResetStateMaybe;
+        bool mSoftResetPermitted;
+        bool mUnknown2D;
+        bool mSoftResetRequested;
+        bool mFadeOutRequested;
+        bool mUnknown30;
+        void *mpAudioResetFunc;
+        void *mpAudioExitFunc;
+        bool mBootCompleted;
+        bool mExecutingFade;
+        bool mUnknown3E;
+        static dReset::Manage_c* GetInstance();
+    };
+} // namespace dReset

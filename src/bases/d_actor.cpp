@@ -61,3 +61,5 @@ dActor_c *dActor_c::construct(ProfileName profName, dBase_c *parent, unsigned lo
     setTmpCtData(position, rotation);
     return (dActor_c*)dBase_c::createBase(profName, parent, param, 2);
 }
+
+dActor_c::~dActor_c() {}

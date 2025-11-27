@@ -282,6 +282,11 @@ config.libs = [
     ]),
     GameLib("bases", [
         Object(Matching, "bases/d_actor.cpp"),
+        Object(Matching, "bases/d_base.cpp"),
+        Object(NonMatching, "bases/d_scene.cpp"),
+    ]),
+    GameLib("mLib", [
+        Object(NonMatching, "mLib/m_fader_base.cpp"),
     ]),
     {
         "lib": "Runtime.PPCEABI.H",
@@ -295,10 +300,7 @@ config.libs = [
     {
         "lib": "Mobiclip",
         "mw_version": config.linker_version,
-        "cflags": [
-            *cflags_base,
-            "-O0"
-        ],
+        "cflags": cflags_base,
         "progress_category": "mobiclip",  # str | List[str]
         "objects": [
             Object(NonMatching, "lib/mobiclip/Bignum.cpp"),
@@ -319,7 +321,7 @@ config.libs = [
         ],
     },
     Rel("d_a_sample", [
-        Object(Matching, "REL/d_a_sampleNP/d_a_sample.cpp")
+        Object(NonMatching, "REL/d_a_sampleNP/d_a_sample.cpp")
     ]),
     Rel("d_camera", [
         Object(NonMatching, "REL/d_cameraNP/d_camera.cpp")

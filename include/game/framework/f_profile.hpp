@@ -57,8 +57,11 @@ namespace fProfile {
     };
 
     /// @brief A set of basic information needed to construct an actor base.
-    struct fActorProfile_c : fBaseProfile_c {
+    struct fActorProfile_c {
 
+        void *(*mpClassInit)(); ///< The constructor function.
+        u16 mExecuteOrder; ///< The execution priority of the base. Lower values mean higher priority.
+        u16 mDrawOrder; ///< The draw priority of the base. Lower values mean higher priority.
         /// @brief Various actor-related properties.
         /// @details These properties will be copied @ref dBaseActor_c::mActorProperties "into the actor"
         /// when it is constructed; this grants easy access to the properties and allows individual actor

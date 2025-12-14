@@ -2,16 +2,16 @@
 #include <game/framework/f_base.hpp>
 #include <game/framework/f_profile.hpp>
 
-BASE_PROFILE(AC_SAMPLE, daSample_c);
+BASE_PROFILE(AC_SAMPLE, dAcSample_c);
 
-int daSample_c::create() {
+int dAcSample_c::create() {
     fn_7_180();
     return SUCCEEDED;
 }
-int daSample_c::doDelete() { return SUCCEEDED; }
-int daSample_c::execute() { return SUCCEEDED; }
-int daSample_c::draw() { return SUCCEEDED; }
+int dAcSample_c::doDelete() { return SUCCEEDED; }
+int dAcSample_c::execute() { return SUCCEEDED; }
+int dAcSample_c::draw() { return SUCCEEDED; }
 
-daSample_c::~daSample_c() {}
+dAcSample_c::~dAcSample_c() {}
 
 void fn_7_180() {}

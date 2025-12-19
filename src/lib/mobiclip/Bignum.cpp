@@ -1,6 +1,6 @@
-#include "mobiclip/Digits.hpp"
-#include "types.h"
 #include <lib/mobiclip/Bignum.hpp>
+#include <lib/mobiclip/Digits.hpp>
+#include <types.h>
 
 Bignum::Bignum() {
     digits = nullptr;
@@ -14,6 +14,47 @@ Bignum::~Bignum() {
         DigitsFree(digits);
     }
 }
+
+void Bignum::Prepare(s32 num)
+{
+  if (num > _8) {
+    DigitsFree(digits);
+    _8 = num + 2;
+    digits = (s32 *)DigitsAlloc((num + 2) * 4);
+  }
+  _4 = num;
+  return;
+}
+
+void Bignum::Clamp() {
+    for (s32 *r5 = &digits[_4 - 1]; _4 > 0; r5 -= 4) {
+        if (*r5 != 0) {
+            break;
+        }
+        _4 -= 4;
+    }
+}
+
+/* m2c output
+    void And__6BignumFi(Bignum *this, s32 arg0) {
+        s32 temp_r0;
+
+    loop_2:
+        if ((s32) this->_4 > arg0) {
+            temp_r0 = this->_4 - 1;
+            this->_4 = temp_r0;
+            this->digits[temp_r0] = 0;
+            goto loop_2;
+        }
+    }
+*/
+void Bignum::And(int num) {
+    while (_4 > num) {
+        _4--;
+        digits[_4] = 0;
+    }
+}
+
 /*
 u8 BitsUsed(u32 param_1) {
     u8 bits[] = {

@@ -284,6 +284,8 @@ config.libs = [
         Object(Matching, "bases/d_actor.cpp"),
         Object(Matching, "bases/d_base.cpp"),
         Object(NonMatching, "bases/d_scene.cpp"),
+        Object(Matching, "bases/d_s_p1.cpp"),
+        Object(Matching, "bases/d_s_p7.cpp"),
     ]),
     GameLib("mLib", [
         Object(NonMatching, "mLib/m_fader_base.cpp"),

@@ -1,8 +1,14 @@
 #pragma once
+#include <lib/mobiclip/MoSdkMem.hpp>
+#include <types.h>
 
-typedef struct Digits {
-    
-} Digits;
+void DigitsSub(s32, s32, s32, s32);
 
-void DigitsAlloc(int);
-void DigitsFree(void*);
+void* DigitsAlloc(int size) {
+    return MOiAlloc(size);
+}
+void DigitsFree(void* ptr) {
+    if (ptr != nullptr) {
+        MOiFree(ptr);
+    }
+}

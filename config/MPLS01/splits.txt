@@ -33,6 +33,44 @@ bases/d_scene.cpp:
 	.sdata      start:0x8023F598 end:0x8023F5A0
 	.sbss       start:0x8023FE34 end:0x8023FE40
 
+bases/d_s_p1.cpp:
+	.text       start:0x80016970 end:0x80016AAC
+	.data       start:0x8016E298 end:0x8016E2E4
+	.sdata      start:0x8023F700 end:0x8023F708
+
+bases/d_s_p2.cpp:
+	.text       start:0x80016AB0 end:0x80016F80
+	.data       start:0x8016E2E8 end:0x8016E334
+	.sdata      start:0x8023F708 end:0x8023F710
+
+bases/d_s_p3.cpp:
+	.text       start:0x80016F80 end:0x80017340
+	.data       start:0x8016E338 end:0x8016E384
+	.sdata      start:0x8023F710 end:0x8023F718
+
+bases/d_s_p4.cpp:
+	.text       start:0x80017340 end:0x80017860
+	.data       start:0x8016E388 end:0x8016E3E0
+	.sdata      start:0x8023F718 end:0x8023F730
+
+bases/d_s_p5.cpp:
+	.text       start:0x80017860 end:0x80018090
+	.ctors      start:0x80147834 end:0x80147838
+	.data       start:0x8016E3E0 end:0x8016E444
+	.sdata      start:0x8023F730 end:0x8023F760
+
+bases/d_s_p6.cpp:
+	.text       start:0x80018090 end:0x80018860
+	.ctors      start:0x80147838 end:0x8014783C
+	.data       start:0x8016E460 end:0x8016E4AC
+	.bss        start:0x8019FFE0 end:0x801A2528
+	.sdata      start:0x8023F760 end:0x8023F768
+
+bases/d_s_p7.cpp:
+	.text       start:0x80018860 end:0x8001895C
+	.data       start:0x8016E4B0 end:0x8016E4FC
+	.sdata      start:0x8023F780 end:0x8023F788
+
 framework/f_base.cpp:
 	.text       start:0x8001B470 end:0x8001C564
 	.data       start:0x8016E720 end:0x8016E850

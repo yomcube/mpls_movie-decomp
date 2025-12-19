@@ -1,4 +1,4 @@
-#include "game/framework/f_base.hpp"
+#include <game/framework/f_base.hpp>
 #include <game/bases/d_base.hpp>
 #include <types.h>
 
@@ -14,9 +14,9 @@ void dBase_c::initLoader() {
 }
 
 dBase_c *dBase_c::createBase(ProfileName profName, dBase_c *parent, unsigned long param, u8 groupType) {
-    fBase_c::createChild(profName, (fBase_c*)parent, param, groupType);
+    return (dBase_c *)fBase_c::createChild(profName, (fBase_c*)parent, param, groupType);
 }
 
 dBase_c *dBase_c::createRoot(ProfileName profName, unsigned long param, u8 groupType) {
-    fBase_c::createRoot(profName, param, groupType);
+    return (dBase_c *)fBase_c::createRoot(profName, param, groupType);
 }

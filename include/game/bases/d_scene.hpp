@@ -24,7 +24,7 @@ public:
     /// @param forceChange If the transition should always be performed.
     static void setNextScene(ProfileName nextScene, unsigned long param, bool forceChange);
 
-    void *mpPhase; // TODO: sPhase_c *
+    //sPhase_c *mpPhase;
 
     static u32 mPara; ///< The parameters for the next scene.
     static ProfileName m_nextScene; ///< The profile name of the next scene.

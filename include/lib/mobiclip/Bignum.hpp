@@ -7,9 +7,14 @@ public:
     Bignum();
     ~Bignum();
 
-    Digits *digits;
-    u32 _4;
-    u32 _8;
+    void Prepare(int);
+    void Clamp();
+    void And(int);
+
+protected:
+    s32 *digits;
+    s32 _4;
+    s32 _8;
     u32 _C;
 };
 

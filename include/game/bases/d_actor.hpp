@@ -23,7 +23,7 @@ public:
     mVec3_c mLastPos;
     mAng3_c mAngle;
     mAng3_c mAngle3D;
-    u8 _padding[0x18];
+    u8 _unk[0x18];
 
     static const mVec3_c *m_tmpCtPosP;
     static const mAng3_c *m_tmpCtAngleP;  

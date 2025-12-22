@@ -13,6 +13,64 @@ Sections:
 	.sdata2     type:rodata align:8
 	.sbss2      type:bss align:32
 
+bases/d_actor.cpp:
+	.text       start:0x80006FB0 end:0x80007278
+	.data       start:0x80155C50 end:0x80155C9C
+	.sbss       start:0x8023FDA8 end:0x8023FDB0
+
+bases/d_base.cpp:
+	.text       start:0x80007280 end:0x800072D4
+
+bases/d_reset.cpp:
+	.text       start:0x800092E0 end:0x8000A270
+	.ctors      start:0x80147808 end:0x80147810
+	.sdata      start:0x8023F580 end:0x8023F598
+	.sbss       start:0x8023FE20 end:0x8023FE30
+
+bases/d_scene.cpp:
+	.text       start:0x8000A270 end:0x8000A7C0
+	.data       start:0x801681F8 end:0x80168248
+	.sdata      start:0x8023F598 end:0x8023F5A0
+	.sbss       start:0x8023FE34 end:0x8023FE40
+
+bases/d_s_p1.cpp:
+	.text       start:0x80016970 end:0x80016AAC
+	.data       start:0x8016E298 end:0x8016E2E4
+	.sdata      start:0x8023F700 end:0x8023F708
+
+bases/d_s_p2.cpp:
+	.text       start:0x80016AB0 end:0x80016F80
+	.data       start:0x8016E2E8 end:0x8016E334
+	.sdata      start:0x8023F708 end:0x8023F710
+
+bases/d_s_p3.cpp:
+	.text       start:0x80016F80 end:0x80017340
+	.data       start:0x8016E338 end:0x8016E384
+	.sdata      start:0x8023F710 end:0x8023F718
+
+bases/d_s_p4.cpp:
+	.text       start:0x80017340 end:0x80017860
+	.data       start:0x8016E388 end:0x8016E3E0
+	.sdata      start:0x8023F718 end:0x8023F730
+
+bases/d_s_p5.cpp:
+	.text       start:0x80017860 end:0x80018090
+	.ctors      start:0x80147834 end:0x80147838
+	.data       start:0x8016E3E0 end:0x8016E444
+	.sdata      start:0x8023F730 end:0x8023F760
+
+bases/d_s_p6.cpp:
+	.text       start:0x80018090 end:0x80018860
+	.ctors      start:0x80147838 end:0x8014783C
+	.data       start:0x8016E460 end:0x8016E4AC
+	.bss        start:0x8019FFE0 end:0x801A2528
+	.sdata      start:0x8023F760 end:0x8023F768
+
+bases/d_s_p7.cpp:
+	.text       start:0x80018860 end:0x8001895C
+	.data       start:0x8016E4B0 end:0x8016E4FC
+	.sdata      start:0x8023F780 end:0x8023F788
+
 framework/f_base.cpp:
 	.text       start:0x8001B470 end:0x8001C564
 	.data       start:0x8016E720 end:0x8016E850
@@ -27,9 +85,105 @@ framework/f_manager.cpp:
 	.sdata      start:0x8023F7D8 end:0x8023F7E0
 	.sbss       start:0x8023FF88 end:0x8023FF90
 
+mLib/m_fader_base.cpp:
+	.text       start:0x8001FEA0 end:0x800200A0
+	.data       start:0x8016EA30 end:0x8016EA54
+
+lib/mobiclip/Bignum.cpp:
+	.text       start:0x80031EF8 end:0x80032C1C
+	.rodata     start:0x80148150 end:0x80148250
+
+lib/mobiclip/CodecFast.cpp:
+	.text       start:0x80032C1C end:0x800333A0
+	.data       start:0x8016FFB8 end:0x80170518
+
+lib/mobiclip/Digits.cpp:
+	.text       start:0x800333A0 end:0x8003362C
+
+lib/mobiclip/ImaAdpcm.cpp:
+	.text       start:0x8003362C end:0x80033844
+	.rodata     start:0x80148250 end:0x80148358
+
+lib/mobiclip/MoApi.cpp:
+	.text       start:0x80033844 end:0x80034268
+	.data       start:0x80170518 end:0x801707A8
+	.sdata      start:0x8023F810 end:0x8023F818
+	.sbss       start:0x80240028 end:0x80240030
+
+lib/mobiclip/MoDeblockWii.cpp:
+	.text       start:0x80034268 end:0x80035650
+	.rodata     start:0x80148358 end:0x801485C0
+	.sdata      start:0x8023F818 end:0x8023F820
+
+lib/mobiclip/MoSdk.cpp:
+	.text       start:0x80035650 end:0x80035C28
+	.data       start:0x801707A8 end:0x801708F8
+	.sdata      start:0x8023F820 end:0x8023F828
+
+lib/mobiclip/MoSdkAdpcmDecoder.cpp:
+	.text       start:0x80035C28 end:0x80035F68
+	.data       start:0x801708F8 end:0x80170970
+	.sdata      start:0x8023F828 end:0x8023F838
+
+lib/mobiclip/MoSdkAudioDecoder.cpp:
+	.text       start:0x80035F68 end:0x800362F8
+	.data       start:0x80170970 end:0x80170A38
+
+lib/mobiclip/MoSdkDemux.cpp:
+	.text       start:0x800362F8 end:0x800364EC
+
+lib/mobiclip/MoSdkFastAudioDecoder.cpp:
+	.text       start:0x800364EC end:0x80036884
+	.data       start:0x80170A38 end:0x80170A78
+	.sdata      start:0x8023F838 end:0x8023F840
+
+lib/mobiclip/MoSdkHeaders.cpp:
+	.text       start:0x80036884 end:0x80037294
+	.rodata     start:0x801485C0 end:0x80148708
+	.data       start:0x80170A78 end:0x80170B78
+	.sdata      start:0x8023F840 end:0x8023F848
+	.sdata2     start:0x80240DF0 end:0x80240E00
+
+lib/mobiclip/MoSdkInput.cpp:
+	.text       start:0x80037294 end:0x80037710
+	.data       start:0x80170B78 end:0x80170C10
+
+lib/mobiclip/MoSdkMem.cpp:
+	.text       start:0x80037710 end:0x8003781C
+	.data       start:0x80170C10 end:0x80170C28
+	.sbss       start:0x80240030 end:0x80240040
+
+lib/mobiclip/MoSdkProcessImage.cpp:
+	.text       start:0x8003781C end:0x80037BA4
+
+lib/mobiclip/MoSdkVideoDecoder.cpp:
+	.text       start:0x80037BA4 end:0x80037FC8
+	.data       start:0x80170C28 end:0x80170CE8
+
+lib/mobiclip/VX2_BitStream.cpp:
+	.text       start:0x80037FC8 end:0x80037FEC
+
+lib/mobiclip/VX2_Cpu.cpp:
+	.text       start:0x80037FEC end:0x80038014
+
+lib/mobiclip/VX2_DecodeBlock16x16.cpp:
+	.text       start:0x80038014 end:0x80038D54
+	.rodata     start:0x80148708 end:0x80148AE0
+
+lib/mobiclip/VX2_DecodeBlock16x2.cpp:
+	.text       start:0x80038D54 end:0x800399D8
+	.rodata     start:0x80148AE0 end:0x80148B70
+
+lib/mobiclip/VX2_DecodeBlock16x4.cpp:
+	.text       start:0x800399D8 end:0x8003A6D8
+	.rodata     start:0x80148B70 end:0x80148C00
+
+lib/mobiclip/VX2_DecodeIntra.cpp:
+	.text       start:0x80046CFC end:0x80046D4C
+
 Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
 	.text       start:0x80138004 end:0x80138074
 	.ctors      start:0x80147800 end:0x80147804 rename:.ctors$10
 	.dtors      start:0x801478E0 end:0x801478E4 rename:.dtors$10
 	.dtors      start:0x801478E4 end:0x801478E8 rename:.dtors$15
-	.sdata      start:0x8023FD88 end:0x8023FD90
+	.sdata      start:0x8023FD88 end:0x8023FD8C

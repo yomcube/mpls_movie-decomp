@@ -323,7 +323,7 @@ config.libs = [
         ],
     },
     Rel("d_a_sample", [
-        Object(NonMatching, "REL/d_a_sampleNP/d_a_sample.cpp")
+        Object(Matching, "REL/d_a_sampleNP/d_a_sample.cpp")
     ]),
     Rel("d_camera", [
         Object(NonMatching, "REL/d_cameraNP/d_camera.cpp")

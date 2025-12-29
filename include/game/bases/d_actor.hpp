@@ -14,7 +14,6 @@ public:
     virtual void postExecute(fBase_c::MAIN_STATE_e);
     virtual int preDraw();
     virtual void postDraw(fBase_c::MAIN_STATE_e);
-    virtual ~dActor_c();
 
     static void setTmpCtData(const mVec3_c*, const mAng3_c*);
     static dActor_c *construct(unsigned short, dBase_c*, unsigned long, const mVec3_c*, const mAng3_c*);
